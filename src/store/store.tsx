@@ -7,11 +7,11 @@ import BeansData from '../data/BeansData';
 
 export const useStore = create(
   persist(
-    (set: any, get) => ({
+    (set, get) => ({
       CoffeeList: CoffeeData,
       BeanList: BeansData,
       CartPrice: 0,
-      FavoriteList: [],
+      FavoritesList: [],
       CartList: [],
       OrderHistoryList: [],
       addToCart: (cartItem: any) =>
@@ -78,6 +78,8 @@ export const useStore = create(
                   if (state.CoffeeList[i].favourite == false) {
                     state.CoffeeList[i].favourite = true;
                     state.FavoritesList.unshift(state.CoffeeList[i]);
+                  } else {
+                    state.CoffeeList[i].favourite = false;
                   }
                   break;
                 }
@@ -88,6 +90,8 @@ export const useStore = create(
                   if (state.BeanList[i].favourite == false) {
                     state.BeanList[i].favourite = true;
                     state.FavoritesList.unshift(state.BeanList[i]);
+                  } else {
+                    state.BeanList[i].favourite = false;
                   }
                   break;
                 }

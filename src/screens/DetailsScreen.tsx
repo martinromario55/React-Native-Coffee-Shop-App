@@ -34,6 +34,7 @@ const DetailsScreen = ({navigation, route}: any) => {
   const [fullDesc, setFullDesc] = useState(false);
   const [price, setPrice] = useState(ItemOfIndex.prices[0]);
 
+  // console.log('Price', [{...price, quantity: 1}]);
   const BackHandler = () => {
     navigation.pop();
   };
@@ -60,7 +61,7 @@ const DetailsScreen = ({navigation, route}: any) => {
       imagelink_square,
       special_ingredient,
       type,
-      price: [{...price, quantity: 1}],
+      prices: [{...price, quantity: 1}],
     });
     calculateCartPrice();
     navigation.navigate('Cart');

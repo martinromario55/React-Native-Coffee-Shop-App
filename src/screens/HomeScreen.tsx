@@ -131,7 +131,7 @@ const HomeScreen = ({navigation}: any) => {
 
   // console.log('Categories:', categories);
   // console.log('SortedCoffe:', sortedCoffee.length);
-  // console.log('BeanList:', BeanList.length);
+  // console.log('BeanList:', BeanList);
   return (
     <View style={styles.ScreenContainer}>
       <StatusBar backgroundColor={COLORS.primaryBlackHex} />
@@ -254,12 +254,12 @@ const HomeScreen = ({navigation}: any) => {
                   });
                 }}>
                 <CoffeeCard
-                  name={item.name}
                   id={item.id}
                   index={item.index}
                   type={item.type}
                   roasted={item.roasted}
                   imagelink_square={item.imagelink_square}
+                  name={item.name}
                   special_ingredient={item.special_ingredient}
                   average_rating={item.average_rating}
                   price={item.prices[2]}
@@ -292,12 +292,12 @@ const HomeScreen = ({navigation}: any) => {
                   });
                 }}>
                 <CoffeeCard
-                  name={item.name}
                   id={item.id}
                   index={item.index}
                   type={item.type}
                   roasted={item.rosted}
                   imagelink_square={item.imagelink_square}
+                  name={item.name}
                   special_ingredient={item.special_ingredient}
                   average_rating={item.average_rating}
                   price={item.prices[2]}

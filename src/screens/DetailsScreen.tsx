@@ -85,7 +85,7 @@ const DetailsScreen = ({navigation, route}: any) => {
           average_rating={ItemOfIndex.average_rating}
           ratings_count={ItemOfIndex.ratings_count}
           BackHandler={BackHandler}
-          TogglerFavourite={ToggleFavourite}
+          ToggleFavourite={ToggleFavourite}
         />
 
         <View style={styles.FooterInfoArea}>
